@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* TOPO */
+
+.top {
+    height: 150px;
+    width: 80%;
+    margin-left: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-top {
+    width: 240px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(194, 6, 6);
+}
+
+.img-top {
+    width: 650px;
+    height: 90px;
+    background-color: #e90606;
+}
+
+/* CABEÇALHO */
+
+.header {
+    display: flex;
+    height: 50px;
+    background-image: linear-gradient(to right, rgb(132, 2, 8), rgb(228, 4, 14));
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 15px;
+    padding: 5px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #fff;
+}
+
+.nav-item>a {
+    color: #ffff;
+    font-weight: 700;
+    padding: 5px;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.nav-item>a:hover {
+    color: #000;
+}
+
+.nav-item-search {
+    padding: 3px;
+}
+
+
+/* TOPO DA SEÇÃO HOME */
+
+.home-top {
+    height: 150px;
+    width: 80%;
+    margin-left: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-home-top {
+    width: 500px;
+    height: 90px;
+    background-color: #e90606;
+}
+
+/* SEÇÃO HOME */
+
+.home {
+    height: 75vh;
+    width: 80%;
+    margin-left: 150px;
+    background-color: blanchedalmond;
+}
+
+.home>ul {
+    display: flex;
+    font-weight: 700;
+}
+
+.home>ul>li>a {
+    margin-left: 10px;
+}
+
+#destaque-item {
+    list-style: outside;
+    margin-right: 10px;
+}
+
+#linha-vertical {
+    width: 900px;
+    border: 2px solid #E5E5E5;
+}
+
+.destaques {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.destaque-principal {
+    height: 100%;
+    width: 60%;
+    border: 2px solid black;
+}
+
+.direita-destaque{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.destaque-secundario {
+    height: 220px;
+    width: 400px;
+    border: 2px solid black;
+}
+
+.destaque-terciario {
+    height: 220px;
+    width: 400px;
+    border: 2px solid black;
+}
+
+/* SEÇÃO POLITICA */
+
+.politica {
+    
+    height: 75vh;
+    width: 80%;
+    margin-left: 150px;
+}
