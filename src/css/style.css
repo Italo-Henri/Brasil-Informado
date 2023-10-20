@@ -28,7 +28,12 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(194, 6, 6);
+    border: 1px solid black;
+}
+
+.logo-top img {
+    height: 100%;
+    width: 100%;
 }
 
 .banner-top {
@@ -125,7 +130,6 @@ html {
 
 .container-title-section {
     margin-left: 11vw;
-    margin-bottom: 1rem;
     display: flex;
 }
 
@@ -203,13 +207,11 @@ html {
 .politica-container {
     margin-left: 11vw;
     width: 70vw;
-    /* background-color: aqua; */
     align-items: center;
 }
 
 .lista-politica {
     display: flex;
-    flex-direction: row;
     align-items: center;
     width: 100%;
     justify-content: space-evenly;
@@ -250,4 +252,42 @@ html {
 
 .data>h5 {
     font-weight: 100;
+}
+
+/* SEÇÃO CIDADES */
+
+.container-cidades {
+    margin-left: 11vw;
+    width: 80vw;
+    align-items: center;
+}
+
+.lista-cidades {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.img-cidades {
+    width: 35%;
+    height: 100%;
+    margin-right: 1rem;
+}
+
+.lista-cidades li {
+    display: flex;
+    max-width: 30%;
+    margin: 2px;
+}
+
+.cidade-text span{
+    font-weight: 600;
+    font-size: 15px;
+    color: #e90606;
+}
+
+.lista-cidades h3 {
+    font-size: 12px;
+    margin-bottom: 8px;
+    width: 100%;
 }
