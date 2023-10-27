@@ -10,6 +10,8 @@ html {
     scroll-behavior: smooth;
 }
 
+a { color: inherit; } 
+
 .body-content {
     display: flex;
     flex-direction: column;
@@ -96,7 +98,7 @@ html {
     transition: 0.2s;
 }
 
-.search-icon:hover{
+.search-icon:hover {
     background-color: rgb(255, 255, 255, 0.4);
 }
 
@@ -130,8 +132,8 @@ html {
     margin-bottom: 2rem;
     margin-left: 13vw;
     margin-right: 16vw;
-    height: 90px;
-    width: 45vw;
+    height: 80px;
+    width: 50vw;
 }
 
 /* TITULOS DAS SEÇÕES */
@@ -287,12 +289,12 @@ html {
     margin-right: 1rem;
 }
 
-.cidade-text{
+.cidade-text {
     width: 200px;
     position: relative;
 }
 
-.cidade-text span{
+.cidade-text span {
     font-weight: 600;
     font-size: 15px;
     color: #e90606;
@@ -335,7 +337,7 @@ html {
     width: 100%;
 }
 
-.title-section-paraiba{
+.title-section-paraiba {
     font-size: 15px;
 }
 
@@ -365,7 +367,7 @@ html {
     margin-left: 1rem;
 }
 
-.lista-destaques-secundario-paraiba  {
+.lista-destaques-secundario-paraiba {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -473,7 +475,7 @@ html {
     position: relative;
 }
 
-.policiais-text span{
+.policiais-text span {
     font-weight: 600;
     font-size: 15px;
     color: #e90606;
@@ -488,4 +490,60 @@ html {
 .policiais-text .data {
     position: absolute;
     bottom: 0;
+}
+
+/* SEÇÃO ESPORTE */
+
+.container-esporte {
+    align-items: center;
+}
+
+.lista-esporte {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.item-list-esporte {
+    height: 250px;
+    width: 350px;
+    position: relative;
+}
+
+.img-esporte {
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+    transition: 0.4s;
+}
+
+.img-esporte:hover {
+    filter: brightness(90%);
+}
+
+.txt-esporte {
+    position: relative;
+    color: #fff;
+    width: 90%;
+    margin-top: -90px;
+    margin-left: 15px;
+}
+
+.txt-esporte span {
+    font-size: 11px;
+    border-radius: 10%;
+    background-color: #e90606;
+    padding: 2px;
+}
+
+.txt-esporte h3 {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.txt-esporte .data {
+    position: relative;
+    margin-top: 10px;
 }
