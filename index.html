@@ -9,21 +9,26 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/responsive.css">
+    <script src="src/js/mobile-navbar.js" defer></script>
     <title>Brasil Informado</title>
 </head>
 
 <body>
     <div class="top">
-        <div class="logo-top">
-            <img src="src/img/logo.png" alt="logo Brasil Informado">
-        </div>
-        <div class="banner-top">
-            <h2>BANNER DE PROPAGANDA</h2>
+        <div class="top-content">
+            <div class="logo-top">
+                <img src="src/img/logo.png" alt="logo Brasil Informado">
+            </div>
         </div>
     </div>
 
     <header class="header">
         <nav class="nav-bar">
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
             <ul class="nav-list">
                 <li class="nav-item"><a href="#">HOME</a></li>
                 <li class="nav-item"><a href="#destaques">DESTAQUES</a></li>
@@ -33,25 +38,16 @@
                 <li class="nav-item"><a href="#policiais">POLICIAIS</a></li>
                 <li class="nav-item"><a href="#esportes">ESPORTES</a></li>
                 <li class="nav-item"><a href="#cultura">CULTURA</a></li>
-                <li class="nav-item"><a href="#fofoca">FOFOCA</a></li>
+                <li class="nav-item"><a href="#fofocas">FOFOCA</a></li>
                 <li class="nav-item"><a href="#gamers">GAMERS</a></li>
             </ul>
+            <img src="src/img/icons8-pesquisar.svg" alt="search icon" class="search-icon">
         </nav>
-        <img src="src/img/icons8-pesquisar.svg" alt="search icon" class="search-icon">
     </header>
 
 
-    <div class="body-content">
-        <div class="banner-container">
-            <div class="banner-left">
-                <h2>BANNER I</h2>
-            </div>
-            <div class="banner-right">
-                <h2>BANNER II</h2>
-            </div>
-        </div>
-
-        <div class="container-title-section">
+    <main class="body-content">
+        <div class="container-title-section" id="destaques">
             <div class="circle"></div>
             <div class="title-section">
                 <h1>DESTAQUES</h1>
@@ -60,35 +56,68 @@
                 <div class="row"></div>
                 <div class="row"></div>
             </div>
-            <div class="title-section">
-                <a href="#">Ver + <span>></span></a>
-            </div>
         </div>
 
-        <section class="container-destaques" id="destaques">
-            <div class="destaques">
-                <div class="destaque-principal">
-                    <img src="src/img/i257652.jpeg" width="100%" height="100%">
-                </div>
-                <div class="direita-destaque">
-                    <div class="destaque-secundario">
-                        <img src="src/img/i257652.jpeg" width="100%" height="100%">
+        <section class="container-highlight">
+            <div class="highlight-content">
+                <div class="highlight">
+                    <img src="src/img/nova-york.jpg" alt="Noticia Principal de Fofocas" class="img-highlight">
+                    <div class="txt-highlight">
+                        <span>DESTAQUES</span>
+                        <span>POLICIAIS</span>
+                        <a href="#">
+                            <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, fuga eaque amet saepe
+                                voluptatibus expedita est neque eveniet delectus ad blanditiis impedit magnam optio,
+                                eos, commodi mollitia nobis suscipit id?</h3>
+                        </a>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
                     </div>
-                    <div class="destaque-terciario">
-                        <img src="src/img/i257652.jpeg" width="100%" height="100%">
-                    </div>
                 </div>
+                <ol class="highlight-list">
+                    <li class="side-highlight">
+                        <img src="src/img/286939584-ash-pikachu-pokemon.jpg" alt="Noticia lateral em Destaque"
+                            class="img-side-highlight">
+                        <div class="txt-highlight">
+                            <span>DESTAQUES</span>
+                            <span>POLICIAIS</span>
+                            <a href="#">
+                                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, fuga eaque amet
+                                    saepe voluptatibus expedita est neque eveniet</h3>
+                            </a>
+                            <div class="data">
+                                <img src="src/img/relogio.png" class="relogio">
+                                <h5>28 de setembro de 2023</h5>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="side-highlight">
+                        <img src="src/img/286939584-ash-pikachu-pokemon.jpg" alt="Noticia lateral em Destaque"
+                            class="img-side-highlight">
+
+                        <div class="txt-highlight">
+                            <span>DESTAQUES</span>
+                            <span>PARAÍBA</span>
+                            <a href="#">
+                                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, fuga eaque amet
+                                    saepe voluptatibus expedita est neque eveniet</h3>
+                            </a>
+                            <div class="data">
+                                <img src="src/img/relogio.png" class="relogio">
+                                <h5>28 de setembro de 2023</h5>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
             </div>
         </section>
 
-        <div class="banner">
-            <h2>Banner III</h2>
-        </div>
-
-        <div class="container-title-section">
+        <div class="container-title-section" id="politica">
             <div class="circle"></div>
             <div class="title-section">
-                <h1>POLÍTICA</h1>
+                <h1>POLITICA</h1>
             </div>
             <div class="container-rows">
                 <div class="row"></div>
@@ -96,152 +125,69 @@
             </div>
         </div>
 
-        <section class="politica-container" id="politica">
-            <ul class="lista-politica">
-                <li class="card-politica">
-                    <img src="src/img/286939584-ash-pikachu-pokemon.jpg" class="img-card-politica">
-                    <span>POLITICA</span>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <div class="data">
-                        <img src="src/img/relogio.png" class="relogio">
-                        <h5>28 de setembro de 2023</h5>
-                    </div>
-                </li>
-                <li class="card-politica">
-                    <img src="src/img/286939584-ash-pikachu-pokemon.jpg" class="img-card-politica">
-                    <span>POLITICA</span>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <div class="data">
-                        <img src="src/img/relogio.png" class="relogio">
-                        <h5>28 de setembro de 2023</h5>
-                    </div>
-                </li>
-                <li class="card-politica">
-                    <img src="src/img/286939584-ash-pikachu-pokemon.jpg" class="img-card-politica">
-                    <span>POLITICA</span>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <div class="data">
-                        <img src="src/img/relogio.png" class="relogio">
-                        <h5>28 de setembro de 2023</h5>
-                    </div>
-                </li>
-            </ul>
-            <ul class="lista-politica">
-                <li class="card-politica">
-                    <img src="src/img/286939584-ash-pikachu-pokemon.jpg" class="img-card-politica">
-                    <span>POLITICA</span>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <div class="data">
-                        <img src="src/img/relogio.png" class="relogio">
-                        <h5>28 de setembro de 2023</h5>
-                    </div>
-                </li>
-                <li class="card-politica">
-                    <img src="src/img/286939584-ash-pikachu-pokemon.jpg" class="img-card-politica">
-                    <span>POLITICA</span>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <div class="data">
-                        <img src="src/img/relogio.png" class="relogio">
-                        <h5>28 de setembro de 2023</h5>
-                    </div>
-                </li>
-                <li class="card-politica">
-                    <img src="src/img/286939584-ash-pikachu-pokemon.jpg" class="img-card-politica">
-                    <span>POLITICA</span>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <div class="data">
-                        <img src="src/img/relogio.png" class="relogio">
-                        <h5>28 de setembro de 2023</h5>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <div class="banner">
-            <h2>Banner IV</h2>
-        </div>
-
-        <section class="container-cidades" id="cidades">
-            <div class="container-title-section">
-                <div class="circle"></div>
-                <div class="title-section">
-                    <h1>CIDADES</h1>
-                </div>
-                <div class="container-rows">
-                    <div class="row"></div>
-                    <div class="row"></div>
-                </div>
-                <div class="title-section">
-                    <a href="#">Ver + <span>></span></a>
-                </div>
-            </div>
-            <ol class="lista-cidades">
-                <li>
-                    <img src="src/img/nova-york.jpg" class="img-cidades">
-                    <div class="cidade-text">
-                        <span>CIDADES</span>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nisi placeat nostrum
-                        </h3>
+        <section class="container-grid-list">
+            <ol class="grid-list">
+                <li class="grid-list-item">
+                    <img src="src/img/nirvana.jpg" alt="Imagem De Noticia" class="img-grid-list">
+                    <div class="txt-grid-list">
+                        <span>POLITICA, DESTAQUES</span>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Teste teste</h3>
                         <div class="data">
                             <img src="src/img/relogio.png" class="relogio">
                             <h5>28 de setembro de 2023</h5>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <img src="src/img/nova-york.jpg" class="img-cidades">
-                    <div class="cidade-text">
-                        <span>CIDADES</span>
-                        <h3>Lorem ipsum dolor</h3>
+                <li class="grid-list-item">
+                    <img src="src/img/nirvana.jpg" alt="Imagem de Noticia" class="img-grid-list">
+                    <div class="txt-grid-list">
+                        <span>POLITICA</span>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
                         <div class="data">
                             <img src="src/img/relogio.png" class="relogio">
                             <h5>28 de setembro de 2023</h5>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <img src="src/img/nova-york.jpg" class="img-cidades">
-                    <div class="cidade-text">
-                        <span>CIDADES</span>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, voluptatem </h3>
+                <li class="grid-list-item">
+                    <img src="src/img/nirvana.jpg" alt="Imagem de Noticia" class="img-grid-list">
+                    <div class="txt-grid-list">
+                        <span>POLITICA</span>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
                         <div class="data">
                             <img src="src/img/relogio.png" class="relogio">
                             <h5>28 de setembro de 2023</h5>
                         </div>
                     </div>
                 </li>
-            </ol>
-
-            <ol class="lista-cidades">
-                <li>
-                    <img src="src/img/nova-york.jpg" class="img-cidades">
-                    <div class="cidade-text">
-                        <span>CIDADES</span>
-                        <h3>Lorem ipsum officiis delectus! Laboriosam veniam</h3>
+                <li class="grid-list-item">
+                    <img src="src/img/nirvana.jpg" alt="Imagem de Noticia" class="img-grid-list">
+                    <div class="txt-grid-list">
+                        <span>POLITICA</span>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
                         <div class="data">
                             <img src="src/img/relogio.png" class="relogio">
                             <h5>28 de setembro de 2023</h5>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <img src="src/img/nova-york.jpg" class="img-cidades">
-                    <div class="cidade-text">
-                        <span>CIDADES</span>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, voluptatem et rem accusantium
-                            officiis delectus!</h3>
+                <li class="grid-list-item">
+                    <img src="src/img/nirvana.jpg" alt="Imagem de Noticia" class="img-grid-list">
+                    <div class="txt-grid-list">
+                        <span>POLITICA</span>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Teste Teste Teste Teste Teste
+                            Teste</h3>
                         <div class="data">
                             <img src="src/img/relogio.png" class="relogio">
                             <h5>28 de setembro de 2023</h5>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <img src="src/img/nova-york.jpg" class="img-cidades">
-                    <div class="cidade-text">
-                        <span>CIDADES</span>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, voluptatem et rem accusantium
-                        </h3>
+                <li class="grid-list-item">
+                    <img src="src/img/nirvana.jpg" alt="Imagem de noticia" class="img-grid-list">
+                    <div class="txt-grid-list">
+                        <span>POLITICA</span>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
                         <div class="data">
                             <img src="src/img/relogio.png" class="relogio">
                             <h5>28 de setembro de 2023</h5>
@@ -251,77 +197,93 @@
             </ol>
         </section>
 
-        <section class="container-paraiba">
-            <div class="banner-grande">
-                <h1>BANNER V </h1>
+        <div class="container-title-section" id="cidades">
+            <div class="circle"></div>
+            <div class="title-section">
+                <h1>CIDADES</h1>
             </div>
-
-            <div class="content-paraiba">
-                <div class="container-title-section-paraiba">
-                    <div class="circle"></div>
-                    <div class="title-section-paraiba">
-                        <h1>PARAÍBA</h1>
-                    </div>
-                    <div class="container-rows-section-paraiba">
-                        <div class="row"></div>
-                        <div class="row"></div>
-                    </div>
-                </div>
-
-                <div class="container-noticias-paraiba">
-                    <div class="destaque-paraiba">
-                        <img src="src/img/nirvana.jpg" class="destaque-img">
-                    </div>
-
-                    <div class="destaques-secundarios-paraiba">
-                        <ul class="lista-destaques-secundario-paraiba">
-                            <li>
-                                <img src="src/img/harley.jpg" class="img-destaque-secundario">
-                                <div class="txt-destaque-secundario-paraiba">
-                                    <span>DESTAQUES, PARAÍBA</span>
-                                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum fuga, fugiat
-                                        maxime</h3>
-                                    <div class="data">
-                                        <img src="src/img/relogio.png" class="relogio">
-                                        <h5>28 de setembro de 2023</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="src/img/harley.jpg" class="img-destaque-secundario">
-                                <div class="txt-destaque-secundario-paraiba">
-                                    <span>DESTAQUES, PARAÍBA</span>
-                                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum fuga, fugiat
-                                        maxime</h3>
-                                    <div class="data">
-                                        <img src="src/img/relogio.png" class="relogio">
-                                        <h5>28 de setembro de 2023</h5>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="src/img/harley.jpg" class="img-destaque-secundario">
-                                <div class="txt-destaque-secundario-paraiba">
-                                    <span>DESTAQUES, PARAÍBA</span>
-                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi accusamus, rerum
-                                        corporis voluptate quas ut quasi et?</h3>
-                                    <div class="data">
-                                        <img src="src/img/relogio.png" class="relogio">
-                                        <h5>28 de setembro de 2023</h5>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="container-rows">
+                <div class="row"></div>
+                <div class="row"></div>
             </div>
-        </section>
-
-        <div class="banner">
-            <h2>Banner VI</h2>
         </div>
 
-        <div class="container-title-section">
+        <section class="mini-list-container">
+            <ul class="mini-list">
+                <li class="mini-item-list">
+                    <img src="src/img/harley.jpg" alt="Imagem De Mini-Lista" class="img-mini-list">
+                    <div class="txt-mini-li">
+                        <span>DESTAQUES, CIDADES</span>
+                        <h3>Lorem ipsum dolor sit amet </h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="mini-item-list">
+                    <img src="src/img/harley.jpg" alt="Imagem De Mini-Lista" class="img-mini-list">
+                    <div class="txt-mini-li">
+                        <span>DESTAQUES, CIDADES</span>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, placeat. Lorem ipsum dolor
+                            sit amet consectetur</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="mini-item-list">
+                    <img src="src/img/harley.jpg" alt="Imagem De Mini-Lista" class="img-mini-list">
+                    <div class="txt-mini-li">
+                        <span>DESTAQUES, CIDADES</span>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, placeat.</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="mini-item-list">
+                    <img src="src/img/harley.jpg" alt="Imagem De Mini-Lista" class="img-mini-list">
+                    <div class="txt-mini-li">
+                        <span>DESTAQUES, CIDADES</span>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, placeat.</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="mini-item-list">
+                    <img src="src/img/harley.jpg" alt="Imagem De Mini-Lista" class="img-mini-list">
+                    <div class="txt-mini-li">
+                        <span>DESTAQUES, CIDADES</span>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, placeat.</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="mini-item-list">
+                    <img src="src/img/harley.jpg" alt="Imagem De Mini-Lista" class="img-mini-list">
+                    <div class="txt-mini-li">
+                        <span>DESTAQUES, CIDADES</span>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, placeat.</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- SEÇÃO PARAIBA -->
+
+
+        <div class="container-title-section" id="brasil">
             <div class="circle"></div>
             <div class="title-section">
                 <h1>BRASIL</h1>
@@ -330,183 +292,184 @@
                 <div class="row"></div>
                 <div class="row"></div>
             </div>
+        </div>
+
+        <section class="container-grid-list">
+            <ol class="grid-list">
+                <li class="grid-list-item">
+                    <img src="src/img/nirvana.jpg" alt="Imagem De Noticia" class="img-grid-list">
+                    <div class="txt-grid-list">
+                        <span>BRASIL, DESTAQUES</span>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Teste teste</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="grid-list-item">
+                    <img src="src/img/nirvana.jpg" alt="Imagem de Noticia" class="img-grid-list">
+                    <div class="txt-grid-list">
+                        <span>BRASIL</span>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="grid-list-item">
+                    <img src="src/img/nirvana.jpg" alt="Imagem de Noticia" class="img-grid-list">
+                    <div class="txt-grid-list">
+                        <span>BRASIL</span>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="grid-list-item">
+                    <img src="src/img/nirvana.jpg" alt="Imagem de Noticia" class="img-grid-list">
+                    <div class="txt-grid-list">
+                        <span>BRASIL</span>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="grid-list-item">
+                    <img src="src/img/nirvana.jpg" alt="Imagem de Noticia" class="img-grid-list">
+                    <div class="txt-grid-list">
+                        <span>BRASIL</span>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Teste Teste Teste Teste Teste
+                            Teste</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="grid-list-item">
+                    <img src="src/img/nirvana.jpg" alt="Imagem de noticia" class="img-grid-list">
+                    <div class="txt-grid-list">
+                        <span>BRASIL</span>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+
+        <div class="container-title-section" id="policiais">
+            <div class="circle"></div>
             <div class="title-section">
-                <a href="#">Ver + <span>></span></a>
+                <h1>POLICIAIS</h1>
+            </div>
+            <div class="container-rows">
+                <div class="row"></div>
+                <div class="row"></div>
             </div>
         </div>
 
-        <section class="container-brasil" id="brasil">
-            <ul class="lista-brasil">
-                <li class="item-list-brasil">
-                    <img src="src/img/286939584-ash-pikachu-pokemon.jpg" class="img-card-brasil">
-                    <span>BRASIL</span>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <div class="data">
-                        <img src="src/img/relogio.png" class="relogio">
-                        <h5>28 de setembro de 2023</h5>
+        <section class="mini-list-container">
+            <ul class="mini-list">
+                <li class="mini-item-list">
+                    <img src="src/img/harley.jpg" alt="Imagem De Mini-Lista" class="img-mini-list">
+                    <div class="txt-mini-li">
+                        <span>DESTAQUES, POLICIAIS</span>
+                        <h3>Lorem ipsum dolor sit amet </h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
                     </div>
                 </li>
-                <li class="item-list-brasil">
-                    <img src="src/img/286939584-ash-pikachu-pokemon.jpg" class="img-card-brasil">
-                    <span>BRASIL</span>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <div class="data">
-                        <img src="src/img/relogio.png" class="relogio">
-                        <h5>28 de setembro de 2023</h5>
+                <li class="mini-item-list">
+                    <img src="src/img/harley.jpg" alt="Imagem De Mini-Lista" class="img-mini-list">
+                    <div class="txt-mini-li">
+                        <span>DESTAQUES, POLICIAIS</span>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, placeat. Lorem ipsum dolor
+                            sit amet consectetur</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
                     </div>
                 </li>
-                <li class="item-list-brasil">
-                    <img src="src/img/286939584-ash-pikachu-pokemon.jpg" class="img-card-brasil">
-                    <span>BRASIL</span>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <div class="data">
-                        <img src="src/img/relogio.png" class="relogio">
-                        <h5>28 de setembro de 2023</h5>
+                <li class="mini-item-list">
+                    <img src="src/img/harley.jpg" alt="Imagem De Mini-Lista" class="img-mini-list">
+                    <div class="txt-mini-li">
+                        <span>DESTAQUES, POLICIAIS</span>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, placeat.</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="mini-item-list">
+                    <img src="src/img/harley.jpg" alt="Imagem De Mini-Lista" class="img-mini-list">
+                    <div class="txt-mini-li">
+                        <span>DESTAQUES, POLICIAIS</span>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, placeat.</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="mini-item-list">
+                    <img src="src/img/harley.jpg" alt="Imagem De Mini-Lista" class="img-mini-list">
+                    <div class="txt-mini-li">
+                        <span>DESTAQUES, POLICIAIS</span>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, placeat.</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="mini-item-list">
+                    <img src="src/img/harley.jpg" alt="Imagem De Mini-Lista" class="img-mini-list">
+                    <div class="txt-mini-li">
+                        <span>DESTAQUES, POLICIAIS</span>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, placeat.</h3>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
                     </div>
                 </li>
             </ul>
-
-            <ul class="lista-brasil">
-                <li class="item-list-brasil">
-                    <img src="src/img/286939584-ash-pikachu-pokemon.jpg" class="img-card-brasil">
-                    <span>BRASIL</span>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <div class="data">
-                        <img src="src/img/relogio.png" class="relogio">
-                        <h5>28 de setembro de 2023</h5>
-                    </div>
-                </li>
-                <li class="item-list-brasil">
-                    <img src="src/img/286939584-ash-pikachu-pokemon.jpg" class="img-card-brasil">
-                    <span>BRASIL</span>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <div class="data">
-                        <img src="src/img/relogio.png" class="relogio">
-                        <h5>28 de setembro de 2023</h5>
-                    </div>
-                </li>
-                <li class="item-list-brasil">
-                    <img src="src/img/286939584-ash-pikachu-pokemon.jpg" class="img-card-brasil">
-                    <span>BRASIL</span>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <div class="data">
-                        <img src="src/img/relogio.png" class="relogio">
-                        <h5>28 de setembro de 2023</h5>
-                    </div>
-                </li>
-            </ul>
         </section>
 
-        <div class="banner">
-            <h2>Banner VII</h2>
+        <div class="container-title-section" id="esportes">
+            <div class="circle"></div>
+            <div class="title-section">
+                <h1>ESPORTES</h1>
+            </div>
+            <div class="container-rows">
+                <div class="row"></div>
+                <div class="row"></div>
+            </div>
         </div>
 
-        <section class="container-policiais" id="policiais">
-            <div class="container-title-section">
-                <div class="circle"></div>
-                <div class="title-section">
-                    <h1>POLICIAIS</h1>
-                </div>
-                <div class="container-rows">
-                    <div class="row"></div>
-                    <div class="row"></div>
-                </div>
-            </div>
-            <ol class="lista-policiais">
-                <li class="item-list-policiais">
-                    <img src="src/img/nova-york.jpg" class="img-policiais">
-                    <div class="policiais-text">
-                        <span>POLICIAIS</span>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nisi placeat nostrum
-                        </h3>
-                        <div class="data">
-                            <img src="src/img/relogio.png" class="relogio">
-                            <h5>28 de setembro de 2023</h5>
-                        </div>
-                    </div>
-                </li>
-                <li class="item-list-policiais">
-                    <img src="src/img/nova-york.jpg" class="img-policiais">
-                    <div class="policiais-text">
-                        <span>POLICIAIS</span>
-                        <h3>Lorem ipsum dolor</h3>
-                        <div class="data">
-                            <img src="src/img/relogio.png" class="relogio">
-                            <h5>28 de setembro de 2023</h5>
-                        </div>
-                    </div>
-                </li>
-                <li class="item-list-policiais">
-                    <img src="src/img/nova-york.jpg" class="img-policiais">
-                    <div class="policiais-text">
-                        <span>POLICIAIS</span>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, voluptatem </h3>
-                        <div class="data">
-                            <img src="src/img/relogio.png" class="relogio">
-                            <h5>28 de setembro de 2023</h5>
-                        </div>
-                    </div>
-                </li>
-            </ol>
-
-            <ol class="lista-policiais">
-                <li class="item-list-policiais">
-                    <img src="src/img/nova-york.jpg" class="img-policiais">
-                    <div class="policiais-text">
-                        <span>POLICIAIS</span>
-                        <h3>Lorem ipsum officiis delectus! Laboriosam veniam</h3>
-                        <div class="data">
-                            <img src="src/img/relogio.png" class="relogio">
-                            <h5>28 de setembro de 2023</h5>
-                        </div>
-                    </div>
-                </li>
-                <li class="item-list-policiais">
-                    <img src="src/img/nova-york.jpg" class="img-policiais">
-                    <div class="policiais-text">
-                        <span>POLICIAIS</span>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, voluptatem et rem accusantium
-                            officiis delectus!</h3>
-                        <div class="data">
-                            <img src="src/img/relogio.png" class="relogio">
-                            <h5>28 de setembro de 2023</h5>
-                        </div>
-                    </div>
-                </li>
-                <li class="item-list-policiais">
-                    <img src="src/img/nova-york.jpg" class="img-policiais">
-                    <div class="policiais-text">
-                        <span>POLICIAIS</span>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, voluptatem et rem accusantium
-                        </h3>
-                        <div class="data">
-                            <img src="src/img/relogio.png" class="relogio">
-                            <h5>28 de setembro de 2023</h5>
-                        </div>
-                    </div>
-                </li>
-            </ol>
-        </section>
-
-        <section class="container-esporte" id="esportes">
-            <div class="container-title-section">
-                <div class="circle"></div>
-                <div class="title-section">
-                    <h1>ESPORTES</h1>
-                </div>
-                <div class="container-rows">
-                    <div class="row"></div>
-                    <div class="row"></div>
-                </div>
-            </div>
-            <ol class="lista-esporte">
-                <li class="item-list-esporte">
-                    <img src="src/img/sanji.jpg" class="img-esporte">
-                    <div class="txt-esporte">
+        <section class="container-list">
+            <ol class="notice-list">
+                <li class="item-list">
+                    <img src="src/img/sanji.jpg" class="img-notice">
+                    <div class="txt-notice">
                         <span>ESPORTES</span>
                         <a href="#">
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit non incidunt reprehenderit
-                            </h3>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
+                                ex autem quo officiis nam repellat veritatis alias</h3>
                         </a>
                         <div class="data">
                             <img src="src/img/relogio.png" class="relogio">
@@ -514,13 +477,13 @@
                         </div>
                     </div>
                 </li>
-                <li class="item-list-esporte">
-                    <img src="src/img/sanji.jpg" class="img-esporte">
-                    <div class="txt-esporte">
+                <li class="item-list">
+                    <img src="src/img/sanji.jpg" class="img-notice">
+                    <div class="txt-notice">
                         <span>ESPORTES</span>
                         <a href="#">
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit non incidunt reprehenderit
-                            </h3>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
+                                ex autem quo officiis nam repellat veritatis alias</h3>
                         </a>
                         <div class="data">
                             <img src="src/img/relogio.png" class="relogio">
@@ -528,13 +491,13 @@
                         </div>
                     </div>
                 </li>
-                <li class="item-list-esporte">
-                    <img src="src/img/sanji.jpg" class="img-esporte">
-                    <div class="txt-esporte">
+                <li class="item-list">
+                    <img src="src/img/sanji.jpg" class="img-notice">
+                    <div class="txt-notice">
                         <span>ESPORTES</span>
                         <a href="#">
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit non incidunt reprehenderit
-                            </h3>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
+                                ex autem quo officiis nam repellat veritatis alias</h3>
                         </a>
                         <div class="data">
                             <img src="src/img/relogio.png" class="relogio">
@@ -545,25 +508,22 @@
             </ol>
         </section>
 
-        <div class="banner">
-            <h2>Banner VIII</h2>
+        <div class="container-title-section" id="cultura">
+            <div class="circle"></div>
+            <div class="title-section">
+                <h1>CULTURA</h1>
+            </div>
+            <div class="container-rows">
+                <div class="row"></div>
+                <div class="row"></div>
+            </div>
         </div>
 
-        <section class="container-cultura" id="cultura">
-            <div class="container-title-section">
-                <div class="circle"></div>
-                <div class="title-section">
-                    <h1>CULTURA</h1>
-                </div>
-                <div class="container-rows">
-                    <div class="row"></div>
-                    <div class="row"></div>
-                </div>
-            </div>
-            <ol class="lista-cultura">
-                <li class="item-list-cultura">
-                    <img src="src/img/sanji.jpg" class="img-cultura">
-                    <div class="txt-cultura">
+        <section class="container-list">
+            <ol class="notice-list">
+                <li class="item-list">
+                    <img src="src/img/sanji.jpg" class="img-notice">
+                    <div class="txt-notice">
                         <span>CULTURA</span>
                         <a href="#">
                             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
@@ -575,9 +535,9 @@
                         </div>
                     </div>
                 </li>
-                <li class="item-list-cultura">
-                    <img src="src/img/sanji.jpg" class="img-cultura">
-                    <div class="txt-cultura">
+                <li class="item-list">
+                    <img src="src/img/sanji.jpg" class="img-notice">
+                    <div class="txt-notice">
                         <span>CULTURA</span>
                         <a href="#">
                             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
@@ -589,9 +549,9 @@
                         </div>
                     </div>
                 </li>
-                <li class="item-list-cultura">
-                    <img src="src/img/sanji.jpg" class="img-cultura">
-                    <div class="txt-cultura">
+                <li class="item-list">
+                    <img src="src/img/sanji.jpg" class="img-notice">
+                    <div class="txt-notice">
                         <span>CULTURA</span>
                         <a href="#">
                             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
@@ -606,66 +566,100 @@
             </ol>
         </section>
 
-        <section class="container-fofocas" id="fofoca">
-            <div class="container-title-section">
-                <div class="circle"></div>
-                <div class="title-section">
-                    <h1>FOFOCAS</h1>
-                </div>
-                <div class="container-rows">
-                    <div class="row"></div>
-                    <div class="row"></div>
-                </div>
+        <div class="container-title-section" id="fofocas">
+            <div class="circle"></div>
+            <div class="title-section">
+                <h1>FOFOCAS</h1>
             </div>
-            <ol class="lista-fofocas">
-                <li class="item-list-fofocas">
-                    <img src="src/img/i257652.jpeg" class="img-principal-fofocas">
-                    <div class="txt-img-principal-fofocas">
+            <div class="container-rows">
+                <div class="row"></div>
+                <div class="row"></div>
+            </div>
+        </div>
+
+        <section class="container-highlight">
+            <div class="highlight-content">
+                <div class="highlight">
+                    <img src="src/img/nova-york.jpg" alt="Noticia Principal de Fofocas" class="img-highlight">
+                    <div class="txt-highlight">
                         <span>FOFOCAS</span>
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, explicabo iure
-                            consequuntur molestias libero sequi dicta fugiat, nisi eum hic dolor, corrupti facere
-                            excepturi? Reiciendis facere dolorum ex pariatur obcaecati!</h3>
+                        <a href="#">
+                            <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, fuga eaque amet saepe
+                                voluptatibus expedita est neque eveniet delectus ad blanditiis impedit magnam optio,
+                                eos, commodi mollitia nobis suscipit id?</h3>
+                        </a>
                         <div class="data">
                             <img src="src/img/relogio.png" class="relogio">
                             <h5>28 de setembro de 2023</h5>
                         </div>
                     </div>
-                </li>
-                <li class="item-list-fofocas">
-                    <div class="div-secundaria-fofocas">
-                        <img src="src/img/i257652.jpeg" class="img-li-fofoca">
-                        <div class="txt-fofocas-secundaria">
+                </div>
+                <ol class="highlight-list">
+                    <li class="side-highlight">
+                        <img src="src/img/286939584-ash-pikachu-pokemon.jpg" alt="Noticia lateral em Destaque"
+                            class="img-side-highlight">
+                        <div class="txt-highlight">
                             <span>FOFOCAS</span>
-                            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis modi nulla lo</h3>
+                            <a href="#">
+                                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, fuga eaque amet
+                                    saepe voluptatibus expedita est neque eveniet</h3>
+                            </a>
                             <div class="data">
                                 <img src="src/img/relogio.png" class="relogio">
                                 <h5>28 de setembro de 2023</h5>
                             </div>
                         </div>
-                    </div>
+                    </li>
+                    <li class="side-highlight">
+                        <img src="src/img/286939584-ash-pikachu-pokemon.jpg" alt="Noticia lateral em Destaque"
+                            class="img-side-highlight">
 
-                    <div class="div-terciaria-fofocas">
-                        <img src="src/img/i257652.jpeg" class="img-li-fofoca">
-                    </div>
-                </li>
-            </ol>
-        </section>
-
-        <section class="container-memes">
-            <div class="container-title-section">
-                <div class="circle"></div>
-                <div class="title-section">
-                    <h1>MEMES</h1>
-                </div>
-                <div class="container-rows">
-                    <div class="row"></div>
-                    <div class="row"></div>
-                </div>
+                        <div class="txt-highlight">
+                            <span>FOFOCAS</span>
+                            <a href="#">
+                                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, fuga eaque amet
+                                    saepe voluptatibus expedita est neque eveniet</h3>
+                            </a>
+                            <div class="data">
+                                <img src="src/img/relogio.png" class="relogio">
+                                <h5>28 de setembro de 2023</h5>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
             </div>
-            <ol class="lista-memes">
-                <li class="item-list-memes">
-                    <img src="src/img/sanji.jpg" class="img-memes">
-                    <div class="txt-memes">
+        </section>
+
+        <div class="container-title-section" id="memes">
+            <div class="circle"></div>
+            <div class="title-section">
+                <h1>MEMES</h1>
+            </div>
+            <div class="container-rows">
+                <div class="row"></div>
+                <div class="row"></div>
+            </div>
+        </div>
+
+        <section class="container-list">
+            <ol class="notice-list">
+                <li class="item-list">
+                    <img src="src/img/sanji.jpg" class="img-notice">
+                    <div class="txt-notice">
+                        <span>MEMES</span>
+                        <a href="#">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
+                            </h3>
+                        </a>
+                        <div class="data">
+                            <img src="src/img/relogio.png" class="relogio">
+                            <h5>28 de setembro de 2023</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-list">
+                    <img src="src/img/sanji.jpg" class="img-notice">
+                    <div class="txt-notice">
                         <span>MEMES</span>
                         <a href="#">
                             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
@@ -677,23 +671,9 @@
                         </div>
                     </div>
                 </li>
-                <li class="item-list-memes">
-                    <img src="src/img/sanji.jpg" class="img-memes">
-                    <div class="txt-memes">
-                        <span>MEMES</span>
-                        <a href="#">
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
-                                ex autem quo officiis nam repellat veritatis alias</h3>
-                        </a>
-                        <div class="data">
-                            <img src="src/img/relogio.png" class="relogio">
-                            <h5>28 de setembro de 2023</h5>
-                        </div>
-                    </div>
-                </li>
-                <li class="item-list-memes">
-                    <img src="src/img/sanji.jpg" class="img-memes">
-                    <div class="txt-memes">
+                <li class="item-list">
+                    <img src="src/img/sanji.jpg" class="img-notice">
+                    <div class="txt-notice">
                         <span>MEMES</span>
                         <a href="#">
                             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
@@ -708,21 +688,23 @@
             </ol>
         </section>
 
-        <section class="container-gamers" id="gamers">
-            <div class="container-title-section">
-                <div class="circle"></div>
-                <div class="title-section">
-                    <h1>GAMERS</h1>
-                </div>
-                <div class="container-rows">
-                    <div class="row"></div>
-                    <div class="row"></div>
-                </div>
+
+        <div class="container-title-section" id="gamers">
+            <div class="circle"></div>
+            <div class="title-section">
+                <h1>GAMERS</h1>
             </div>
-            <ol class="lista-gamers">
-                <li class="item-list-gamers">
-                    <img src="src/img/sanji.jpg" class="img-gamers">
-                    <div class="txt-gamers">
+            <div class="container-rows">
+                <div class="row"></div>
+                <div class="row"></div>
+            </div>
+        </div>
+
+        <section class="container-list">
+            <ol class="notice-list">
+                <li class="item-list">
+                    <img src="src/img/sanji.jpg" class="img-notice">
+                    <div class="txt-notice">
                         <span>GAMERS</span>
                         <a href="#">
                             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
@@ -734,9 +716,9 @@
                         </div>
                     </div>
                 </li>
-                <li class="item-list-gamers">
-                    <img src="src/img/sanji.jpg" class="img-gamers">
-                    <div class="txt-gamers">
+                <li class="item-list">
+                    <img src="src/img/sanji.jpg" class="img-notice">
+                    <div class="txt-notice">
                         <span>GAMERS</span>
                         <a href="#">
                             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
@@ -748,9 +730,9 @@
                         </div>
                     </div>
                 </li>
-                <li class="item-list-gamers">
-                    <img src="src/img/sanji.jpg" class="img-gamers">
-                    <div class="txt-gamers">
+                <li class="item-list">
+                    <img src="src/img/sanji.jpg" class="img-notice">
+                    <div class="txt-notice">
                         <span>GAMERS</span>
                         <a href="#">
                             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dolores. Voluptatum
@@ -764,11 +746,10 @@
                 </li>
             </ol>
         </section>
-    </div>
+    </main>
 
     <footer class="footer">
         <div id="footer-content">
-
             <ul class="footer-list">
                 <li>
                     <a href="#" class="footer-link">1° ESCRITORIO - RUA SÃO PAULO, SORRILANDIA, N 10, Sousa-PB - CEP:
@@ -793,9 +774,8 @@
                 </div>
             </div>
 
-
-            <div class="logo">
-                <img src="src/img/logo.png">
+            <div class="container-img-footer">
+                <img src="src/img/logo.png" alt="Logo Brasil Informado" class="logo-footer">
             </div>
         </div>
 

@@ -1,3 +1,4 @@
+/* CONFIGURAÇÕES PADRÃO DA PÁGINA */
 * {
     margin: 0;
     padding: 0;
@@ -5,41 +6,45 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    color: inherit;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-a { color: inherit; } 
-
-.body-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+html {scroll-behavior: smooth;}
 
 :root {
+    --color-main: #e90606;
     --color-default-text: #fff;
     --color-footer: #000;
     --color-footer-copyright: #161616;
 }
 
-/* TOPO */
+/* CORPO DA PÁGINA */
+.body-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+/* TOPO */
 .top {
     height: 150px;
-    width: 80%;
-    margin-left: 150px;
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.top-content {
+    display: flex;
+    max-width: 1200px;
+    border: solid;
 }
 
 .logo-top {
     width: 240px;
     height: 120px;
-    margin-right: 4rem;
 }
 
 .logo-top img {
@@ -53,48 +58,66 @@ a { color: inherit; }
     background-color: #e90606;
 }
 
+/* MENU HAMBURGUER */
+
+.mobile-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
 /* CABEÇALHO */
 
 .header {
     display: flex;
-    height: 50px;
+    min-height: 8vh;
     background-image: linear-gradient(to right, rgb(132, 2, 8), rgb(228, 4, 14));
     justify-content: center;
     align-items: center;
 }
 
 .nav-bar {
+    display: flex;
     align-items: center;
 }
 
-
 .nav-list {
     display: flex;
-    list-style: none;
-    margin-right: 3rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 13px;
-    margin: 15px;
-    padding-bottom: 1px;
-    transition: 0.1s;
+    margin: 0.5rem;
+    border-radius: 5%;
 }
 
-.nav-item:hover {
-    border-bottom: 3px solid #fff;
-}
-
-.nav-item>a {
+.nav-item > a {
     color: #ffff;
     font-weight: 535;
-    padding: 1px;
-    justify-content: center;
-    transition: 0.3s;
+    letter-spacing: 1px;
+    padding: 0.1rem 0.7rem;
+    transition: 0s;
+}
+
+.nav-item>a:hover {
+    padding: 0.4px 0.7rem;
+    border-bottom: solid rgba(255, 255, 255, 0.8);
 }
 
 .search-icon {
-    padding: 4px;
+    padding: 0.3rem;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.2s;
@@ -111,6 +134,7 @@ a { color: inherit; }
     width: 100%;
     color: var(--color-default-text);
     justify-content: space-between;
+    margin-top: 1.5rem;
 } 
 
 .footer-list li:first-child {
@@ -120,7 +144,7 @@ a { color: inherit; }
 #footer-content {
     background-color: var(--color-footer);
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,3fr);
     padding: 3rem 3.5rem;
     gap: 10rem;
 }
@@ -131,8 +155,8 @@ a { color: inherit; }
 
 #footer-social-media {
     display: flex;
-    gap: 2rem;
-    margin-top: 1.5rem;
+    gap: 1rem;
+    margin-top: 0.1rem;
 }
 
 #footer-social-media .footer-link {
@@ -210,6 +234,10 @@ a { color: inherit; }
 
 .container-title-section {
     display: flex;
+    width: 100%;
+    max-width: 1120px;
+    margin: 1rem 0rem;
+    padding: 0.5rem 1rem;
 }
 
 .title-section {
@@ -219,18 +247,13 @@ a { color: inherit; }
 
 .title-section h1 {
     font-size: 20px;
-}
-
-.title-section>a {
-    color: #000;
-}
-
-.title-section a span {
-    font-weight: 700;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .circle {
     background-color: #e90606;
+    padding: 5px;
     height: 10px;
     width: 10px;
     border-radius: 50%;
@@ -238,72 +261,16 @@ a { color: inherit; }
 }
 
 .container-rows {
-    width: 50vw;
+    width: 100%;
 }
 
 .row {
     padding: 1px;
     margin: 0px 10px 2px 10px;
-    width: 100%;
     background-color: #BFBFBF;
 }
 
-/* SEÇÃO HOME */
-
-.container-destaques {
-    width: 60vw;
-    flex-wrap: wrap;
-}
-
-.destaques {
-    height: 100%;
-    width: 100%;
-    display: flex;
-}
-
-.destaque-principal {
-    width: 50vw;
-    margin-right: 10px;
-    border: 2px solid black;
-}
-
-.direita-destaque {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.destaque-secundario {
-    height: 25vh;
-    margin-bottom: 1rem;
-    border: 2px solid black;
-}
-
-.destaque-terciario {
-    height: 30vh;
-    border: 2px solid black;
-}
-
-/* SEÇÃO POLITICA */
-
-.politica-container {
-    width: 60vw;
-    align-items: center;
-}
-
-.lista-politica {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-evenly;
-}
-
-.card-politica {
-    width: 18rem;
-    height: 22rem;
-    padding: 1px;
-    margin: 2px;
-}
+/* DIV DATA */
 
 .data {
     display: flex;
@@ -316,493 +283,154 @@ a { color: inherit; }
     margin-right: 2px;
 }
 
-.img-card-politica {
-    width: 100%;
-    height: 16rem;
-}
 
-.card-politica>span {
-    color: #e90606;
-    font-weight: 500;
-}
+/* SEÇÃO DE LISTA EM GRADE */
 
-.card-politica>h3 {
-    width: 100%;
-    padding: 3px 0px;
-}
-
-.data>h5 {
-    font-weight: 100;
-}
-
-/* SEÇÃO CIDADES */
-
-.container-cidades {
-    width: 80vw;
-    align-items: center;
-}
-
-.lista-cidades {
-    display: flex;
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-.lista-cidades li {
-    display: flex;
-    height: 110px;
-}
-
-.img-cidades {
-    width: 140px;
-    height: 100%;
-    margin-right: 1rem;
-}
-
-.cidade-text {
-    width: 200px;
-    position: relative;
-}
-
-.cidade-text span {
-    font-weight: 600;
-    font-size: 15px;
-    color: #e90606;
-}
-
-.lista-cidades h3 {
-    font-size: 12px;
-    margin-bottom: 8px;
-    width: 100%;
-}
-
-.cidade-text .data {
-    position: absolute;
-    bottom: 0;
-}
-
-/* SEÇÃO PARAÍBA */
-
-.container-paraiba {
-    width: 80vw;
-    display: flex;
-}
-
-.content-paraiba {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-}
-
-.banner-grande {
-    width: 300px;
-    height: 460px;
-    margin-right: 4rem;
-    background-color: #e90606;
-}
-
-.container-title-section-paraiba {
-    display: flex;
-    width: 100%;
-}
-
-.title-section-paraiba {
-    font-size: 15px;
-}
-
-.container-rows-section-paraiba {
-    width: 100%;
-}
-
-.container-noticias-paraiba {
-    height: 100%;
+.container-grid-list {
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
-.destaque-paraiba {
+.grid-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    gap: 10px;
+}
+
+.grid-list-item {
     width: 350px;
-    height: 400px;
 }
 
-.destaque-img {
+.img-grid-list {
+    height: 250px;
     width: 100%;
-    height: 100%;
+    box-shadow: 1px 1px 5px black
 }
 
-.destaques-secundarios-paraiba {
-    width: 400px;
-    height: 400px;
+.txt-grid-list span {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--color-main);
+    font-weight: 750;
+}
+
+.txt-grid-list h3 {
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    padding: 0.4rem 0 1rem 0;
+}
+
+/* SEÇÃO MINI LIST */
+.mini-list-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mini-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    gap: 15px 10px;
+}
+
+.mini-item-list {
+    display: flex;
+    width: 350px;
+    height: 100px;
+}
+
+.img-mini-list {
+    height: 100%;
+    width: 100px;
+}
+
+.txt-mini-li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
     margin-left: 1rem;
 }
 
-.lista-destaques-secundario-paraiba {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
-}
-
-.lista-destaques-secundario-paraiba li {
-    display: flex;
-    flex-direction: row;
-}
-
-.img-destaque-secundario {
-    width: 30%;
-    height: 100%;
-    margin-right: 1rem;
-}
-
-.txt-destaque-secundario-paraiba {
-    width: 200px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.txt-destaque-secundario-paraiba span {
-    color: #e90606;
-    font-weight: 400;
+.txt-mini-li span {
+    color: var(--color-main);
+    text-transform: uppercase;
     font-size: 12px;
+    font-weight: 700;
 }
 
-.txt-destaque-secundario-paraiba h3 {
+.txt-mini-li h3 {
     font-size: 15px;
+    font-weight: 650;
 }
 
-.txt-destaque-secundario-paraiba .data {
+.txt-mini-li .data {
     position: absolute;
     bottom: 0;
 }
 
-/* SESSÃO BRASIL */
 
-.container-brasil {
-    width: 60vw;
-}
-
-.lista-brasil {
+/* SEÇÃO EM DESTAQUE */
+.container-highlight {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-.item-list-brasil {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    height: 100%;
-}
-
-.img-card-brasil {
-    width: 100%;
-    height: 200px;
-    margin-bottom: 10px;
-}
-
-.item-list-brasil span {
-    font-size: 15px;
-    color: #e90606;
-    font-weight: 500;
-}
-
-.item-list-brasil h3 {
-    font-size: 18px;
-    width: 100%;
-    margin-bottom: 7px;
-}
-
-/* SESSÃO POLICIAIS */
-
-.container-policiais {
-    align-items: center;
-}
-
-.lista-policiais {
-    display: flex;
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-.item-list-policiais {
-    display: flex;
-    height: 110px;
-}
-
-.img-policiais {
-    width: 140px;
-    height: 100%;
-    margin-right: 1rem;
-}
-
-.policiais-text {
-    width: 200px;
-    position: relative;
-}
-
-.policiais-text span {
-    font-weight: 600;
-    font-size: 15px;
-    color: #e90606;
-}
-
-.policiais-text h3 {
-    font-size: 12px;
-    margin-bottom: 8px;
-    width: 100%;
-}
-
-.policiais-text .data {
-    position: absolute;
-    bottom: 0;
-}
-
-/* SEÇÃO ESPORTE */
-
-.container-esporte {
-    align-items: center;
-}
-
-.lista-esporte {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    gap: 10px;
-}
-
-.item-list-esporte {
-    height: 250px;
-    width: 350px;
-    position: relative;
-}
-
-.img-esporte {
-    width: 100%;
-    height: 100%;
-    filter: brightness(80%);
-    transition: 0.4s;
-}
-
-.img-esporte:hover {
-    filter: brightness(90%);
-}
-
-.txt-esporte {
-    position: relative;
-    color: #fff;
-    width: 90%;
-    margin-top: -90px;
-    margin-left: 15px;
-}
-
-.txt-esporte span {
-    font-size: 11px;
-    border-radius: 10%;
-    background-color: #e90606;
-    padding: 2px;
-}
-
-.txt-esporte h3 {
-    font-size: 12px;
-    font-weight: 800;
-}
-
-.txt-esporte .data {
-    position: relative;
-    margin-top: 10px;
-}
-
-/* SEÇÃO CULTURA */
-
-.container-cultura {
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.lista-cultura {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    gap: 10px;
-}
-
-.item-list-cultura {
-    height: 250px;
-    width: 350px;
-    position: relative;
-}
-
-.img-cultura {
-    width: 100%;
-    height: 100%;
-    filter: brightness(80%);
-    transition: 0.4s;
-}
-
-.img-cultura:hover {
-    filter: brightness(90%);
-}
-
-.txt-cultura {
-    position: relative;
-    color: #fff;
-    width: 90%;
-    margin-top: -100px;
-    margin-left: 15px;
-}
-
-.txt-cultura span {
-    font-size: 11px;
-    border-radius: 10%;
-    background-color: #e90606;
-    padding: 2px;
-}
-
-.txt-cultura h3 {
-    font-size: 12px;
-    font-weight: 800;
-}
-
-.txt-cultura .data {
-    position: relative;
-    margin-top: 10px;
-}
-
-/* SEÇÃO FOFOCA */
-
-.container-fofocas {
-    width: 80vw;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
 }
 
-.lista-fofocas {
+.highlight-content {
+    max-width: 1200px;
     display: flex;
-    width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.highlight {
+    height: 410px;
+    width: 710px;
+    margin-right: 10px;
+    border: solid 2px #252424;
+    box-shadow: 1px 1px 8px black;
+}
+
+.highlight-list {
     gap: 10px;
-}
-
-.item-list-fofocas {
-    position: relative;
-}
-
-.item-list-fofocas:first-child {
-    width: 720px;
-    height: 394px;
-}
-
-.item-list-fofocas:last-child {
-    height: 100%;
-}
-
-
-.img-principal-fofocas {
-    height: 100%;
-    width: 100%;
-}
-
-.img-li-fofoca {
-    height: 100%;
-    width: 100%;
-}
-
-.txt-img-principal-fofocas {
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    width: 100%;
-}
-
-.txt-img-principal-fofocas span {
-    font-size: 11px;
-    border-radius: 10%;
-    background-color: #e90606;
-    padding: 2px;
-}
-
-.txt-img-principal-fofocas h3 {
-    font-size: 16px;
-}
-
-.txt-img-principal-fofocas .data {
-    position: relative;
-    margin-top: 10px;
-}
-
-.div-secundaria-fofocas {
-    position: relative;
-    margin-bottom: 10px;
-    width: 340px;
-    height: 195px;
-}
-
-.txt-fofocas-secundaria {
-    position: relative;
-    left: 20px;
-    top: -80px;
-    width: 100%;
-    font-size: 12px;
-    color: #fff;
-}
-
-.txt-fofocas-secundaria span {
-    font-size: 11px;
-    border-radius: 10%;
-    background-color: #e90606;
-    padding: 2px;
-}
-
-.txt-fofocas-secundaria .data {
-    position: relative;
-    margin-top: 10px;
-}
-
-.div-terciaria-fofocas {
-    width: 340px;
-    height: 195px;
-}
-
-/* SEÇÃO MEMES */
-.container-memes {
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.lista-memes {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    gap: 10px;
+    flex-direction: column;
 }
 
-.item-list-memes {
-    height: 250px;
+.side-highlight {
+    height: 200px;
     width: 350px;
-    position: relative;
+    border: solid 2px #252424;
+    box-shadow: 1px 1px 7px black;
 }
 
-.img-memes {
+.img-highlight {
     width: 100%;
     height: 100%;
     filter: brightness(80%);
     transition: 0.4s;
 }
 
-.img-memes:hover {
+.img-highlight:hover {
     filter: brightness(90%);
 }
 
-.txt-memes {
+.img-side-highlight {
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+    transition: 0.4s;
+}
+
+.img-side-highlight:hover {
+    filter: brightness(90%);
+}
+
+.txt-highlight {
     position: relative;
     color: #fff;
     width: 90%;
@@ -810,75 +438,79 @@ a { color: inherit; }
     margin-left: 15px;
 }
 
-.txt-memes span {
+.txt-highlight span {
     font-size: 11px;
     border-radius: 10%;
-    background-color: #e90606;
+    background-color: var(--color-main);
     padding: 2px;
+    font-weight: 700;
 }
 
-.txt-memes h3 {
+.txt-highlight h3 {
     font-size: 12px;
     font-weight: 800;
 }
 
-.txt-memes .data {
+.txt-highlight .data {
     position: relative;
     margin-top: 10px;
 }
 
-/* SEÇÃO GAMERS */
-.container-gamers {
-    align-items: center;
-    margin-bottom: 2rem;
+/* SEÇÕES DE LISTA */
+.container-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.lista-gamers {
+.notice-list {
+    max-width: 1200px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+    flex-flow: row wrap;
     gap: 10px;
 }
 
-.item-list-gamers {
+.item-list {
     height: 250px;
     width: 350px;
+    border: solid 2px #252424;
+    box-shadow: 1px 1px 6px black;
     position: relative;
 }
 
-.img-gamers {
+.img-notice {
     width: 100%;
     height: 100%;
     filter: brightness(80%);
     transition: 0.4s;
 }
 
-.img-cultura:hover {
+.img-notice:hover {
     filter: brightness(90%);
 }
 
-.txt-gamers {
+.txt-notice {
     position: relative;
     color: #fff;
     width: 90%;
-    margin-top: -100px;
+    margin-top: -140px;
     margin-left: 15px;
 }
 
-.txt-gamers span {
+.txt-notice span {
     font-size: 11px;
     border-radius: 10%;
-    background-color: #e90606;
+    background-color: var(--color-main);
     padding: 2px;
+    font-weight: 700;
 }
 
-.txt-gamers h3 {
-    font-size: 12px;
+.txt-notice h3 {
+    font-size: 14px;
     font-weight: 800;
 }
 
-.txt-gamers .data {
+.txt-notice .data {
     position: relative;
     margin-top: 10px;
 }
