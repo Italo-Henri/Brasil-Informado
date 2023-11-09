@@ -1,16 +1,5 @@
 @media screen and (max-width: 1100px) {
 
-    .logo-top {
-        width: 200px;
-        height: 70px;
-    }
-
-    .banner-top {
-        width: 560px;
-        height: 70px;
-        margin-left: 2rem;
-    }
-
     .grid-list {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -81,12 +70,10 @@
 
     .logo-top {
         width: 276px;
-        height: 70px;
     }
 
     .banner-top {
         margin-left: 1rem;
-        height: 70px;
     }
 
     .nav-list {
@@ -244,6 +231,14 @@
 
 @media screen and (max-width: 500px) {
     body {overflow-x: hidden;}
+
+    .logo-top {
+        height: 50%;
+    }
+
+    .banner-top {
+        height: 50%;
+    }
 
     .item-list {
         width: 346px;
