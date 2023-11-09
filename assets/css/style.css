@@ -213,14 +213,12 @@ html {scroll-behavior: smooth;}
     padding: 2rem 0;
     display: flex;
     justify-content: center;
-    border: solid;
 }
 
 .banner-content {
     display: flex;
     max-width: 1200px;
     width: 70%;
-    border: solid;
 }
 
 .banner-left {
